@@ -105,11 +105,11 @@ export const Editor: React.FC<EditorProps> = ({ initialContent, onContentChange 
         <span className="relative group border-b-2 border-dotted border-purple-400 cursor-pointer">
           <span dangerouslySetInnerHTML={{ __html: suggestion.find }} />
           <div className="absolute bottom-full mb-2 w-max max-w-sm left-1/2 -translate-x-1/2 bg-gray-800 border border-gray-600 rounded-lg p-3 text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto z-20 shadow-lg">
-            <div className="font-bold mb-2 flex items-center text-purple-400"><SparklesIcon className="w-4 h-4 mr-2" /> Suggestion</div>
+            <div className="font-bold mb-2 flex items-center text-purple-400"><SparklesIcon className="w-4 h-4 mr-2" /> 제안</div>
             <p className="mb-3"><span className="line-through text-red-400/70" dangerouslySetInnerHTML={{ __html: suggestion.find }} /> → <span className="text-green-400/90">{suggestion.replace}</span></p>
             <div className="flex justify-end space-x-2">
-              <button onClick={() => setSuggestion(null)} className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-xs">Dismiss</button>
-              <button onClick={acceptSuggestion} className="px-2 py-1 bg-purple-600 hover:bg-purple-700 rounded-md text-xs">Accept</button>
+              <button onClick={() => setSuggestion(null)} className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded-md text-xs">무시</button>
+              <button onClick={acceptSuggestion} className="px-2 py-1 bg-purple-600 hover:bg-purple-700 rounded-md text-xs">수락</button>
             </div>
           </div>
         </span>
@@ -139,7 +139,7 @@ export const Editor: React.FC<EditorProps> = ({ initialContent, onContentChange 
          {isSuggesting && (
             <div className="flex items-center space-x-2 text-sm text-gray-500 animate-pulse">
                 <SparklesIcon className="w-4 h-4 text-purple-500" />
-                <span>Checking for suggestions...</span>
+                <span>제안을 확인 중입니다...</span>
             </div>
          )}
        </div>

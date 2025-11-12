@@ -9,7 +9,7 @@ interface SelectionToolbarProps {
   isLoading: boolean;
 }
 
-const quickActions = ["Improve writing", "Make it shorter", "Make it longer", "Fix grammar"];
+const quickActions = ["글 다듬기", "더 짧게", "더 길게", "문법 수정"];
 
 export const SelectionToolbar: React.FC<SelectionToolbarProps> = ({ range, onIterate, isLoading }) => {
   const [customInstruction, setCustomInstruction] = useState('');
@@ -34,7 +34,7 @@ export const SelectionToolbar: React.FC<SelectionToolbarProps> = ({ range, onIte
      return (
         <div style={toolbarStyle} className="flex items-center space-x-2 bg-gray-800/80 backdrop-blur-md border border-gray-600 text-white px-3 py-2 rounded-lg shadow-lg">
            <div className="w-5 h-5 border-2 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
-            <span className="text-sm">Working...</span>
+            <span className="text-sm">작업 중...</span>
         </div>
      )
   }
@@ -58,7 +58,7 @@ export const SelectionToolbar: React.FC<SelectionToolbarProps> = ({ range, onIte
           type="text"
           value={customInstruction}
           onChange={(e) => setCustomInstruction(e.target.value)}
-          placeholder="Or type a custom instruction..."
+          placeholder="또는 직접 지시사항을 입력하세요..."
           className="bg-transparent text-xs w-full focus:outline-none px-2 py-1 placeholder-gray-500"
         />
         <button type="submit" className="text-gray-400 hover:text-white p-1 rounded-full hover:bg-gray-700" disabled={!customInstruction.trim()}>

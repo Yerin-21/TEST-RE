@@ -71,15 +71,15 @@ export const InitialPrompt: React.FC<InitialPromptProps> = ({ onGenerate }) => {
   return (
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center">
         <div className="w-full max-w-3xl p-4 md:p-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-2">What should we write about?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-2">무엇에 대해 작성할까요?</h2>
             <p className="text-center text-gray-400 mb-8">
-                Provide a prompt and optional attachments to get started.
+                시작하려면 프롬프트와 선택적인 첨부 파일을 제공하세요.
             </p>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <textarea
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
-                    placeholder="e.g., Write a blog post about the future of renewable energy..."
+                    placeholder="예: 재생 에너지의 미래에 대한 블로그 게시물 작성..."
                     className="w-full h-40 p-4 bg-gray-800 border border-gray-700 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200"
                 />
                 <div className="space-y-2">
@@ -93,10 +93,10 @@ export const InitialPrompt: React.FC<InitialPromptProps> = ({ onGenerate }) => {
                         <div className="space-y-1 text-center">
                            <PaperclipIcon className="mx-auto h-10 w-10 text-gray-500" />
                             <div className="flex text-sm text-gray-400">
-                                <span className="font-medium text-purple-400">Upload a file</span>
-                                <p className="pl-1">or drag and drop</p>
+                                <span className="font-medium text-purple-400">파일 업로드</span>
+                                <p className="pl-1">또는 드래그 앤 드롭</p>
                             </div>
-                            <p className="text-xs text-gray-500">Attach any relevant documents</p>
+                            <p className="text-xs text-gray-500">관련 문서를 첨부하세요</p>
                         </div>
                         <input id="file-upload" name="file-upload" type="file" className="sr-only" multiple onChange={handleFileChange} />
                     </label>
@@ -124,7 +124,7 @@ export const InitialPrompt: React.FC<InitialPromptProps> = ({ onGenerate }) => {
                     disabled={!prompt.trim()}
                     className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-purple-500 disabled:bg-gray-600 disabled:cursor-not-allowed"
                 >
-                    Generate
+                    생성하기
                 </button>
             </form>
         </div>

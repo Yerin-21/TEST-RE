@@ -40,14 +40,14 @@ export default function App() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <SparklesIcon className="w-8 h-8 text-purple-400" />
-            <h1 className="text-xl font-bold tracking-tight text-white">Magic Writer</h1>
+            <h1 className="text-xl font-bold tracking-tight text-white">매직 라이터</h1>
           </div>
           {isGenerated && (
              <button
                 onClick={handleNewDocument}
                 className="px-4 py-2 text-sm font-semibold text-white bg-purple-600 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-purple-500 transition-colors"
               >
-                New Document
+                새 문서
               </button>
           )}
         </div>
@@ -57,7 +57,7 @@ export default function App() {
         {isLoading && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900/70 z-40">
             <div className="w-12 h-12 border-4 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
-            <p className="mt-4 text-lg text-gray-300">Gemini is thinking...</p>
+            <p className="mt-4 text-lg text-gray-300">Gemini가 생각 중입니다...</p>
           </div>
         )}
 
@@ -65,7 +65,7 @@ export default function App() {
           <div className="container mx-auto mt-8 p-4 bg-red-900/50 border border-red-700 rounded-lg flex items-center space-x-3">
             <AlertTriangleIcon className="w-6 h-6 text-red-400" />
             <p className="text-red-300">
-              <strong>Error:</strong> {error}
+              <strong>오류:</strong> {error}
             </p>
           </div>
         )}
