@@ -1,0 +1,5 @@
+{
+  "name": "Magic Writer",
+  "description": "An intelligent writing collaborator powered by Gemini. Generate initial drafts, get inline feedback, and receive proactive suggestions to elevate your writing in a slick, distraction-free environment.",
+  "requestFramePermissions": []
+}
